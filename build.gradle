@@ -34,9 +34,12 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.apache.struts/struts2-core
     compile group: 'org.apache.struts', name: 'struts2-core', version: '2.5.14'
-
+    // https://mvnrepository.com/artifact/org.apache.struts/struts2-spring-plugin
+    compile group: 'org.apache.struts', name: 'struts2-spring-plugin', version: '2.5.14'
+    // https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api
+    compile group: 'org.apache.tomcat', name: 'tomcat-servlet-api', version: '8.5.16'
     // https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc
-    testCompile group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '6.2.2.jre8'
+    compile group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '6.2.2.jre8'
 
     // https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2
     compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.1.1'

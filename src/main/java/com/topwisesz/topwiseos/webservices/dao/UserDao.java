@@ -19,9 +19,9 @@ public class UserDao {
 
     public List<User> getUser(String name, String password) {
 
-        StringBuilder sql = new StringBuilder(" select `id`, `rid`, `imei`, `swversion` from DeviceInfo");
+        StringBuilder sql = new StringBuilder(" select id, rid, imei, swversion from DeviceInfo");
 //        sql.append(" where `name` = ? and `password` = ?");
-        sql.append(" where `id` = ?");
+        sql.append(" where id = ?");
 
         return jdbcTemplate.query(sql.toString(), new String[] { name }, new UserMapper());
     }

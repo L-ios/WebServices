@@ -37,4 +37,9 @@ public class User {
     public void setSwVersion(String swVersion) {
         this.swVersion = swVersion;
     }
+
+    @Override
+    public String toString() {
+        return "{id: " + id + ", rid: " + rid + ", imei: " + imei + ",swVersion: " + swVersion +"}";
+    }
 }
