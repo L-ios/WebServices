@@ -7,7 +7,7 @@
 <struts>
     <include file="struts-default.xml"/>
     <package name="default" extends="struts-default">
-        <action name="">
+        <action name="hello">
             <result>index.jsp</result>
         </action>
     </package>
