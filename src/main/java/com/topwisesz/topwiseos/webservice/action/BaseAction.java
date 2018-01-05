@@ -1,4 +1,4 @@
-package com.topwisesz.topwiseos.webservices.action;
+package com.topwisesz.topwiseos.webservice.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.interceptor.ServletRequestAware;
@@ -9,21 +9,22 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class BaseAction extends ActionSupport implements ServletResponseAware, ServletRequestAware {
+public class BaseAction extends ActionSupport implements ServletRequestAware, ServletResponseAware {
+
     private HttpServletRequest httpServletRequest;
     private HttpServletResponse httpServletResponse;
 
-    public PrintWriter getWriter() throws IOException {
-        return httpServletResponse.getWriter();
+    @Override
+    public void setServletRequest(HttpServletRequest request) {
+        this.httpServletRequest = request;
     }
 
     @Override
     public void setServletResponse(HttpServletResponse response) {
-        httpServletResponse = response;
+        this.httpServletResponse = response;
     }
 
-    @Override
-    public void setServletRequest(HttpServletRequest request) {
-        httpServletRequest = request;
+    public PrintWriter getWriter() throws IOException {
+        return httpServletResponse.getWriter();
     }
 }
