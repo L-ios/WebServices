@@ -1,6 +1,6 @@
 package com.topwisesz.topwiseos.webservices.bean;
 
-public class User {
+public class Device {
     private int id;
     private String rid;
     private String imei;
@@ -40,6 +40,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "{id: " + id + ", rid: " + rid + ", imei: " + imei + ",swVersion: " + swVersion +"}";
+        return "{id: " + id + ", rid: " + rid + ", imei: " + imei + ", swVersion: " + swVersion + "}";
     }
 }

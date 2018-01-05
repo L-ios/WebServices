@@ -1,30 +1,26 @@
 package com.topwisesz.topwiseos.webservices.action;
 
-import com.topwisesz.topwiseos.webservices.bean.User;
-import com.topwisesz.topwiseos.webservices.service.UserService;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import com.topwisesz.topwiseos.webservices.bean.Device;
+import com.topwisesz.topwiseos.webservices.bean.impl.DeviceImpl;
 
 public class UserAction extends BaseAction {
-    private UserService userService;
+    private DeviceImpl deviceService;
 
-    public UserService getUserService() {
-        return userService;
+    public DeviceImpl getDeviceService() {
+        return deviceService;
     }
 
-    public void setUserService(UserService userService) {
-        this.userService = userService;
+    public void setDeviceService(DeviceImpl deviceService) {
+        this.deviceService = deviceService;
     }
 
     public String login() throws Exception{
-        User loginUser = userService.checkUser("100008441", null);
-        if (loginUser != null) {
-            getWriter().write(loginUser.toString());
+        Device device = deviceService.getDevice("100008441");
+        if (device != null) {
+            getWriter().write(device.toString());
             return null;
         } else {
-            getWriter().write("帐号或密码不正确!");
+            getWriter().write("code not right!!!!");
             return null;
         }
     }
