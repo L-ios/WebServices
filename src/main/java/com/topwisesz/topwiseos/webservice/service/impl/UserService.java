@@ -9,10 +9,18 @@ import java.util.List;
 
 public class UserService implements IUserService {
     @Autowired
-    private UserMapper userDao;
+    private UserMapper userMapper;
+
+    public UserMapper getUserMapper() {
+        return userMapper;
+    }
+
+    public void setUserMapper(UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
 
     @Override
     public List<User> selectAll() {
-        return userDao.selectAll();
+        return userMapper.selectAll();
     }
 }

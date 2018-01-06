@@ -65,10 +65,13 @@ dependencies {
     compile group: 'org.apache.tomcat', name: 'tomcat-servlet-api', version: "$tomcat_version"
 
     // https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc
-    // compile group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '6.2.2.jre8'
+     compile group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '6.2.2.jre8'
 
     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
     compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+//    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.2'
 
 
     // https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2

@@ -5,7 +5,7 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
-    <package namespace="/user" name="users-package" extends="base-package">
+    <package namespace="/users" name="users-package" extends="base-package">
 
         <global-results>
 
@@ -13,6 +13,6 @@
 
         </global-results>
 
-        <action name="login" class="com.topwisesz.topwiseos.webservice.action.UserAction" method="login"/>
+        <action name="login" class="userAction" method="login"/>
     </package>
 </struts>

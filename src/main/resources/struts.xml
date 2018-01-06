@@ -5,8 +5,11 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
+    <include file="struts-default.xml"/>
+
     <package namespace="/*" name="base-package" extends="struts-default">
     </package>
 
     <include file="struts/struts-user.xml" />
+
 </struts>
